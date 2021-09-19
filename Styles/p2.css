@@ -1,0 +1,67 @@
+.item1 { grid-area: top; }
+.item2 { grid-area: 1800s; border: 5px solid red;}
+.item3 { grid-area: early1900s; border: 5px solid green;}
+.item4 { grid-area: late1900s; border: 5px solid blue;}
+.item5 { grid-area: 2000s; border: 5px solid yellow;}
+.item6 { grid-area: timeline; border: 5px solid purple;}
+ 
+.grid-container {
+	font-family: helvetica;
+	color: white;
+	display: grid;
+	grid-template-areas:
+	    'top top'
+		'1800s early1900s'
+		'late1900s 2000s'
+		'timeline timeline';
+	grid-gap: 10px;
+}	
+
+.grid-container > div {
+  text-align: center;
+  padding: 10px;
+}
+
+.navigation {grid-area: navigation;}
+.title {grid-area: title; font-family: verdana;}
+.hts {grid-area: hts;}
+
+.item1 {
+	background-image: url('../Images/background2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	 display: grid;
+	 grid-template-areas:
+	 'hts title title title navigation';
+}	
+
+.item1 > div {
+  text-align: center;
+}
+
+body {
+	background-image: url('../Images/background1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+}
+
+img, iframe {
+	border-radius: 10px;
+}
+
+@media screen and (min-width: 1400px) {
+	.grid-container {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.grid-container {
+		font-size: 12px;
+	}
+	.item1 {
+		font-size: 18px;
+	}
+}
